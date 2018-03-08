@@ -8,9 +8,9 @@ Zadatak studenta je dešifrirati tekst/vic enkriptiran AES šifrom u CBC enkripc
 
 1. Otkriti IP adresu vlastitog virtualnog servera. Iskoristite činjnicu da centralni server periodično šalje svim računalima na podmreži `10.0.0.0/20` korisne informacije (_multicast_ promet). Računalima se dodjeljuju dinamičke IP adrese (putem DHCP servera) pa su IP adrese podložne promjenama.
 
-2. Izvršiti ARP spoofing napad (_Kali Linux_) i otkriti tajni _cookie_ iz kojeg se izvodi dekripcijski ključ za dekripciju šifriranog teksta. Centralni server periodično šalje studentovom serveru `POST` zahtjeve na `/arp` (_unicast_ promet). Studentov server na ovaj zahtjev vraća centralnom serveru tajni _cookie_. Sva komunikacija ide u _čisto_ (nije zaštićena).
+2. Izvršiti ARP spoofing napad (_Kali Linux_) i otkriti tajni _cookie_ iz kojeg se izvodi dekripcijski ključ za dekripciju šifriranog teksta. Centralni server periodično šalje studentovom serveru `POST` zahtjeve na `/arp` (_unicast_ promet). Studentov server po primitku ovog zahtjeva vraća tajni _cookie_. Sva komunikacija ide u _čisto_ (nije zaštićena).
 
-    _Cookie_ možete pokušati dobiti na isti način kao i centralni server (slanjem `POST` zahtjeva na `/arp`), no postoji jedno ograničenje: ovi zahtjevi uključuju poznavanje autentikacijskog ključa koji zna samo server. Stoga je najednostavniji način otkrivanja _cookie_-ja zapravo _ARP spoofing_ napad.
+    _Cookie_ možete pokušati dobiti na isti način kao i centralni server (slanjem `POST` zahtjeva na `/arp`), no postoji jedno ograničenje: ovi zahtjevi se autenticiraju odgovarajućim autentikacijskim ključem (_auth_key_) kojeg zna samo centralni server. Stoga, najednostavniji način otkrivanja _cookie_-ja je zapravo presretanje prometa između centralnog servera i vašeg virtualnog servera, odnosno, _ARP spoofing_ napad.
 
 3. Izvodite dekripcijski ključ na osnovu _cookie_-ija. Ključevi se izvode primjenom _Password-Based Key Derivation Function 2 (`PBKDF2`)_. Parametri `PBKDF2` funkcije koji su korišteni za izvođenje ključa možete pronaći u _[source code](/crypto-oracle)_-u (pogodite u kojoj datoteci :-).
 
