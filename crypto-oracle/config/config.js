@@ -29,7 +29,7 @@ const dev = {
     ARP_CHALLENGE,
 
     // Targeted cookie; each student gets a unique cookie to guess/break.
-    ECB_COOKIE: String(ECB_COOKIE),
+    ECB_COOKIE: ECB_COOKIE ? String(ECB_COOKIE) : undefined,
     ECB_CHALLENGE,
     PLAINTEXT_LIMIT: 64,
     CBC_IV_CHALLENGE,
