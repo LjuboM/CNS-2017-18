@@ -12,7 +12,7 @@ Zadatak studenta je dešifrirati tekst/vic enkriptiran AES šifrom u CBC enkripc
 
     _Cookie_ možete pokušati dobiti na isti način kao i centralni server (slanjem `POST` zahtjeva na `/arp`), no postoji jedno ograničenje: ovi zahtjevi se autenticiraju odgovarajućim autentikacijskim ključem (_auth_key_) kojeg zna samo centralni server. Stoga, najednostavniji način otkrivanja _cookie_-ja je zapravo presretanje prometa između centralnog servera i vašeg virtualnog servera, odnosno, _ARP spoofing_ napad.
 
-3. Izvodite dekripcijski ključ na osnovu _cookie_-ija. Ključevi se izvode primjenom _Password-Based Key Derivation Function 2 (`PBKDF2`)_. Parametri `PBKDF2` funkcije koji su korišteni za izvođenje ključa možete pronaći u _[source code](/crypto-oracle)_-u (pogodite u kojoj datoteci :-).
+3. Izvodite dekripcijski ključ na osnovu _cookie_-ija. Ključevi se izvode primjenom _Password-Based Key Derivation Function 2 (`PBKDF2`)_. Parametre `PBKDF2` funkcije koji su korišteni za izvođenje ključa možete pronaći u _[source code](/crypto-oracle)_-u (pogodite u kojoj datoteci :-).
 
 4. Dohvatite šifrirani tekst s virtualnog servera slanjem `GET` zahtjeva na `/arp/challenge`, te ga dešifrirajte koristeći ključ iz prethodnog koraka. Za dekripciju možete koristiti nekakvu biblioteku koja implementira ovakav način zaštite ili čak _online_ servis koji implementira AEC-CBC (mi smo uspješno testirali jedan takav _online_ servis).
 
