@@ -7,7 +7,7 @@ _Electronic CodeBook (ECB)_ je način enkripcije poruka primjenom blok šifri ka
 Neka je P _plaintext_ poruka duga _m_ blokova, P = P<sub>1</sub>,P<sub>2</sub>, ... ,P<sub>m</sub>. U ECB enkripcijskom modu odgovarajući _ciphertext_ dobije se kako slijedi (vidi priloženu sliku): C = C<sub>1</sub>,C<sub>2</sub>, ... ,C<sub>m</sub>, uz C<sub>i</sub>=E<sub>K</sub>(P<sub>i</sub>), za i=1...m.
 
 <p align="center">
-<img src="../img/ecb.png" alt="ECB encryption" width="400px" height="auto"/>
+<img src="../img/ecb.PNG" alt="ECB encryption" width="400px" height="auto"/>
 <br><br>
 <em>Enkripcija u ECB modu</em>
 </p>
