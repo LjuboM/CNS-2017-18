@@ -85,18 +85,18 @@ Ovaj _ciphertext_ i IV rezultat su enkripcije tajne riječi u CBC modu.
 
     ```Bash
     # plaintext size: 1 byte
-        plaintext: 00
-    padded plaintext: 00:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f
+    plaintext: 00
+    w/padding: 00:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f
 
     # plaintext size: 2 byte
-        plaintext: 00:01
-    padded plaintext: 00:01:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e
+    plaintext: 00:01
+    w/padding: 00:01:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e
 
     # plaintext size: 10 byte
-        plaintext: 00:01:02:03:04:05:06:07:08:09
-    padded plaintext: 00:01:02:03:04:05:06:07:08:09:06:06:06:06:06:06
+    plaintext: 00:01:02:03:04:05:06:07:08:09
+    w/padding: 00:01:02:03:04:05:06:07:08:09:06:06:06:06:06:06
 
     # plaintext size: 13 byte
-        plaintext: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c
-    padded plaintext: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:03:03:03
+    plaintext: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c
+    w/padding: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:03:03:03
     ```
