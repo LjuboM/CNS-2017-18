@@ -4,7 +4,7 @@
 
 _Electronic CodeBook (ECB)_ je način enkripcije poruka primjenom blok šifri kao što su DES/3DES, AES i dr. Budući da blok šifre rade s blokovima fiksne duljine (npr. **AES koristi 128-bitne blokove**), poruke koje su dulje od nominalne duljine bloka dane šifre moramo razbiti na više blokova prije enkripcije. U ECB modu, svaki blok se enkriptira/dekriptira odvojeno i neovisno od drugih blokova.
 
-Neka je P _plaintext_ poruka duga _m_ blokova, P = P<sub>1</sub>,P<sub>2</sub>, ... ,P<sub>m</sub>. U ECB enkripcijskom modu odgovarajući _ciphertext_ dobije se kako slijedi (vidi priloženu sliku): C = C<sub>1</sub>,C<sub>2</sub>, ... ,C<sub>m</sub>, uz C<sub>i</sub>=E<sub>K</sub>(P<sub>i</sub>), za i=1...m.
+Neka je P _plaintext_ poruka duga _m_ blokova, P = P<sub>1</sub>,P<sub>2</sub>, ... ,P<sub>m</sub>. U ECB enkripcijskom modu odgovarajući _ciphertext_ dobije se kako slijedi (vidi priloženu sliku): C = C<sub>1</sub>,C<sub>2</sub>, ... ,C<sub>m</sub>, uz C<sub>i</sub> = E<sub>K</sub>(P<sub>i</sub>), za i=1...m.
 
 <p align="center">
 <img src="../img/ecb.PNG" alt="ECB encryption" width="400px" height="auto"/>
