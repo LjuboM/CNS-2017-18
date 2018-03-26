@@ -15,7 +15,7 @@ Uz pretpostavku da se primjenjena blok šifra (npr. AES) ponaša kao **pseudo-ra
 Važna pretpostavka za sigurnost CBC moda je **nepredvidivost/nasumičnost inicijalizacijskog vektora**. U nastavku je slikovito prikazana prednost CBC u odnosu na ECB mod; identična slika karakterizirana visokim stupnjem redudancije enkripritana je u ECB i CBC modu (primjenom AES blok šifre).
 
 <p align="center">
-<img src="../img/tux.PNG" alt="ECB vs CBC" width="400px" height="auto"/>
+<img src="../img/tux.png" alt="ECB vs CBC" width="400px" height="auto"/>
 <br>
 <em>ECB vs CBC</em>
 </p>
@@ -83,20 +83,20 @@ Ovaj _ciphertext_ i IV rezultat su enkripcije tajne riječi u CBC modu.
 
 3. Riječi iz rječnika _wordlist.txt_ kraće su od 16 byte-a. Kao takve, _crypto oracle_ dodaje odgovarajući _padding_ neposredno prije njihove enkripcije. _Padding_ je opisan u PKCS#7 standardu:
 
-```Bash
-# plaintext size: 1 byte
-       plaintext: 00
-padded plaintext: 00:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f
+    ```Bash
+    # plaintext size: 1 byte
+        plaintext: 00
+    padded plaintext: 00:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f:0f
 
-# plaintext size: 2 byte
-       plaintext: 00:01
-padded plaintext: 00:01:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e
+    # plaintext size: 2 byte
+        plaintext: 00:01
+    padded plaintext: 00:01:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e:0e
 
-# plaintext size: 10 byte
-       plaintext: 00:01:02:03:04:05:06:07:08:09
-padded plaintext: 00:01:02:03:04:05:06:07:08:09:06:06:06:06:06:06
+    # plaintext size: 10 byte
+        plaintext: 00:01:02:03:04:05:06:07:08:09
+    padded plaintext: 00:01:02:03:04:05:06:07:08:09:06:06:06:06:06:06
 
-# plaintext size: 13 byte
-       plaintext: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c
-padded plaintext: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:03:03:03
-```
+    # plaintext size: 13 byte
+        plaintext: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c
+    padded plaintext: 00:01:02:03:04:05:06:07:08:09:0a:0b:0c:03:03:03
+    ```
