@@ -10,6 +10,8 @@ Na ovom GitHub repozitoriju profesor će objavljivati upute, dijelove koda, konf
 
 ## Uputstva
 
+**NEW:** Na repozitorij je dodana skripta `cryptor.js` koju možete koristiti za jednostavnu enkripciju/dekripciju u raznim modovima (uključujući `aes-256-cbc`). U skripti imate primjer enkripcije i dekripcije u CBC modu. Skripta se nalazi u direktoriju [crypto-oracle/crypto_modules](/crypto-oracle/crypto_modules). Skriptu pokrećete u terminalu na sljedeći način: `node cryptor.js`.
+
 * [Lab 1 - ARP spoofing](/instructions/lab-1.md)
 * [Lab 2 - ECB mode vulnerabilities](/instructions/lab-2.md)
 * [Lab 3 - CBC mode and predictable IVs](/instructions/lab-3.md)
