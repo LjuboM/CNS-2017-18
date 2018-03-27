@@ -102,7 +102,7 @@ const dev = {
                     { 
                         path: '/cbc/iv',
                         method: 'POST',
-                        params: '{ plaintext: string (utf8) }',
+                        params: '{ plaintext: string (hex) }',
                         response: '{ iv: string (hex), ciphertext: string (hex) }',
                         description: `Get a chosen plaintext word encrypted in CBC mode
                         using a predictable initialization vector (IV).`

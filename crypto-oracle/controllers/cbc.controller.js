@@ -13,11 +13,11 @@ let iv = null
 ;(async () => {
     try {
         key = await Crypto.generateKey('RANDOM', 32)
-        iv = Buffer.from(await random())
+        iv = await random()
         
         challenge = Crypto.encrypt('CBC', {
             key,  
-            iv: await random(),
+            iv,
             plaintext: config.CBC_IV_CHALLENGE
         })
         debug('Challenge ready [CBC]: %o', challenge)
@@ -54,7 +54,11 @@ module.exports = {
                 // Increment the intialization vector 
                 // by a fixed know value CBC_IV_INCREMENT
                 incrementIv(iv, config.CBC_IV_INCREMENT)
-                const challenge = Crypto.encrypt('CBC', { key, iv, plaintext })
+                const challenge = Crypto.encrypt('CBC', { 
+                    key, 
+                    iv, 
+                    plaintext: Buffer.from(plaintext, 'hex')
+                })
     
                 return res.json(challenge)
     
