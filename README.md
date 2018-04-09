@@ -15,5 +15,5 @@ Na ovom GitHub repozitoriju profesor će objavljivati upute, dijelove koda, konf
 * [Lab 1 - ARP spoofing](/instructions/lab-1.md)
 * [Lab 2 - ECB mode vulnerabilities](/instructions/lab-2.md)
 * [Lab 3 - CBC mode and predictable IVs](/instructions/lab-3.md)
-* Lab 4 - CTR mode and repeated IVs
+* [Lab 4 - CTR mode and repeated IVs/counter](/instructions/lab-4.md)
 * ...
