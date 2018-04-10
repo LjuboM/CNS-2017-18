@@ -41,7 +41,7 @@ Primjenom npr. `curl` alata (Kali Linux) navedeni zahtjev možete napraviti kako
 curl -d plaintext='b5cadfsdf' -X POST http://localhost:3000/ctr
 ```
 
-_Crypto oracle_ (vaš REST server) uzima vaš _plaintext_ enkriptira ga u CBC modu tajnim 256 bitnim ključem (`aes-256-ctr`) i vraća vam odgovarajući _ciphertext_; primjetite, _oracle_ ne vraća odgovarajući CTR odnosno inicijalizacijski vektor kako je to bio slučaj s CBC modom.
+_Crypto oracle_ (vaš REST server) uzima vaš _plaintext_ enkriptira ga u CTR modu tajnim 256 bitnim ključem (`aes-256-ctr`) i vraća vam odgovarajući _ciphertext_; primjetite, _oracle_ ne vraća odgovarajući CTR odnosno inicijalizacijski vektor kako je to bio slučaj s CBC modom.
 
 ```Bash
 {
